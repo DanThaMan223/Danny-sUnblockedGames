@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <!-- Registration Form -->
+      <div id="registerForm" class="form hidden">
+        <h2>Register</h2>
+        <input type="email" id="registerEmail" placeholder="Email">
+        <input type="password" id="registerPassword" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p id="registerMessage"></p>
+        <p>Already have an account? <span onclick="toggleForm()">Login here</span></p>
+      </div>
+      
+      <!-- Login Form -->
+      <div id="loginForm" class="form">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginMessage"></p>
+        <p>Don't have an account? <span onclick="toggleForm()">Register here</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
